@@ -8,6 +8,9 @@ require("dotenv").config({
 })
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    author: "DTechImperium"
+  },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
