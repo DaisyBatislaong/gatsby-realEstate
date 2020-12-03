@@ -1,0 +1,62 @@
+nav{
+   position: absolute;
+   top: 0;
+   z-index: 100;
+   width: 100%;
+}
+.navContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: max-content;
+}
+
+img {
+  width: 13rem;
+  cursor: pointer;
+}
+.linkContainer {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.linkContainer a,
+.iconContainer li {
+  font-size: 1.3rem;
+  color: #0a0a0a;
+}
+
+.iconContainer {
+  display: flex;
+  width: 10%;
+  justify-content: space-around;
+}
+
+.middle {
+  position: relative;
+}
+
+.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f7b721;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+  top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+a:hover {
+  color: #f7b721;
+}

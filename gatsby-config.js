@@ -9,7 +9,7 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    author: "DTechImperium"
+    author: "DTechImperium",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -21,6 +21,13 @@ module.exports = {
         spaceId: `c2jlpkowjo08`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/img/`,
       },
     },
   ],

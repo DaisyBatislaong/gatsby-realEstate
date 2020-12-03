@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react"
+import Navbar from "./Navbar"
+import "../styles/globalStyles.css"
 
-const Layout = () => {
-   return (
-      <div>
-         
-      </div>
-   )
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <div>{children}</div>
+    </>
+  )
 }
 
 export default Layout

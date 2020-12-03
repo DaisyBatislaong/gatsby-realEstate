@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan&display=swap");
+
+* {
+  max-width: 2000px;
+  font-family: "Spartan";
+  margin: 0;
+}
+
+li{
+   list-style-type: none;
+}
+
+a{
+   text-decoration: none;
+}
+
+.headerContainer{
+   width: 100%;
+}
