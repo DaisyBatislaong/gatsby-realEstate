@@ -1,48 +1,83 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa"
 import styles from "../styles/Navbar.module.css"
-import logo from "../img/logoHouse2.png"
+import logoWhite from "../img/logo-house-white.png"
+import {
+  NavWrapper,
+  NavLi,
+  MobileIcon,
+  LinkContainer,
+} from "../styles/NavbarStyles"
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+  const [resized, setResized] = useState(false)
+  const [clicked, setClicked] = useState(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 40) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+
+  const changeSize = () => {
+    if (window.innerWidth <= 960) {
+      setResized(true)
+    } else {
+      setResized(false)
+    }
+  }
+
+  const handleClicked = () => {
+    setClicked(!clicked)
+  }
+  window.addEventListener("scroll", changeBackground)
+  window.addEventListener("resize", changeSize)
+
   return (
-    <nav>
+    <NavWrapper scrolled={scrolled}>
       <div className={styles.navContainer}>
         <Link>
-          <img src={logo} alt="" />
+          <img src={logoWhite} alt="" width={scrolled || resized ? 160 : 208} />
         </Link>
-        <ul className={styles.linkContainer}>
-          <li>
+        <LinkContainer className={styles.linkContainer} clicked={clicked}>
+          <NavLi scrolled={scrolled}>
             <Link to="/" className={styles.middle}>
               Home
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi scrolled={scrolled}>
             <Link to="/" className={styles.middle}>
               Properties
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi scrolled={scrolled}>
             <Link to="/" className={styles.middle}>
               About Us
             </Link>
-          </li>
-          <li>
+          </NavLi>
+          <NavLi scrolled={scrolled}>
             <Link to="/" className={styles.middle}>
               Contact
             </Link>
-          </li>
-        </ul>
+          </NavLi>
+        </LinkContainer>
         <ul className={styles.iconContainer}>
-          <li>
+          <NavLi scrolled={scrolled} resized={resized}>
             <FaEnvelope />
-          </li>
-          <li>
+          </NavLi>
+          <NavLi scrolled={scrolled} resized={resized}>
             <FaPhone />
-          </li>
+          </NavLi>
+          <MobileIcon onClick={handleClicked}>
+            {clicked ? <FaTimes /> : <FaBars />}
+          </MobileIcon>
         </ul>
       </div>
-    </nav>
+    </NavWrapper>
   )
 }
 

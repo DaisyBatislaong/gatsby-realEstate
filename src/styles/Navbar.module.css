@@ -12,25 +12,19 @@ nav{
   height: max-content;
 }
 
-img {
-  width: 13rem;
-  cursor: pointer;
-}
-.linkContainer {
-  display: flex;
-  width: 60%;
-  justify-content: space-between;
-}
-.linkContainer a,
-.iconContainer li {
-  font-size: 1.3rem;
-  color: #0a0a0a;
-}
+
 
 .iconContainer {
   display: flex;
-  width: 10%;
+  width: 20%;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 960px) {
+  .iconContainer{
+    margin: 0 1rem;
+    width: 30%;
+  }
 }
 
 .middle {
@@ -55,8 +49,4 @@ img {
 .middle:hover:before {
   visibility: visible;
   transform: scaleX(1);
-}
-
-a:hover {
-  color: #f7b721;
 }
