@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           </NavLi>
           <NavLi scrolled={scrolled}>
-            <Link to="/" className={styles.middle}>
+            <Link to="/properties" className={styles.middle}>
               Properties
             </Link>
           </NavLi>

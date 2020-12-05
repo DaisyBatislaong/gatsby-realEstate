@@ -1,12 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "../styles/Featured.module.css"
+import styles from "../styles/Properties.module.css"
 import Image from "gatsby-image"
 
-const Featured = () => {
+const Properties = () => {
   const data = useStaticQuery(graphql`
     {
-      houses: allContentfulRealEstate(filter: { featured: { eq: true } }) {
+      houses: allContentfulRealEstate {
         nodes {
           id
           bath
@@ -27,7 +27,7 @@ const Featured = () => {
   `)
   return (
     <>
-      <h1>FEATURED HOUSES</h1>
+      <h1>ALL PROPERTIES</h1>
       <section className={styles.page}>
         {data.houses.nodes.map(house => {
           return (
@@ -61,4 +61,4 @@ const Featured = () => {
   )
 }
 
-export default Featured
+export default Properties
