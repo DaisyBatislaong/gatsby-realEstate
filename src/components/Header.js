@@ -5,7 +5,7 @@ import Image from 'gatsby-image'
 const Header = () => {
   const data = useStaticQuery(graphql`
     {
-      fluid: file(relativePath: {eq: "header3.jpg"}) {
+      fluid: file(relativePath: {eq: "background1.jpg"}) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG

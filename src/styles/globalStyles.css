@@ -13,7 +13,9 @@ li{
 a{
    text-decoration: none;
 }
-
-.headerContainer{
+.container{
+   min-height: 100vh;
+}
+.headerContainer div{
    width: 100%;
 }

@@ -57,13 +57,13 @@ margin: 0 auto;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
-  background: rgba(224, 164, 34, 0.2);
+  background: rgba(224, 164, 34, 0.4);
   transition: ease-in-out 0.2s;
 }
 
 .wrapperInner h3{
    margin: 1rem 0rem;
-   color: #e8e4c9;
+   color:#e8e4c9;
    font-size: 1rem;
 }
 
