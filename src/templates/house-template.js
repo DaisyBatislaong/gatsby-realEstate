@@ -16,9 +16,18 @@ const ComponentName = ({ data }) => {
       description: { description },
     },
   } = data
+
+
   return (
     <Layout>
-      <Image fixed={img[0].fixed} />
+    <section>
+    {img.map((image, index)=>{
+      return(
+        <Image fixed={img[`${index}`].fixed} />
+      )
+    })}
+    </section>
+ 
     </Layout>
   )
 }
