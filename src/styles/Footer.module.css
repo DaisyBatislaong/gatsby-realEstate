@@ -6,6 +6,7 @@ footer {
   align-items: center;
   margin-top: 10rem;
   padding: 4rem;
+  flex-wrap: wrap;
 }
 
 .innerContainer {
@@ -14,12 +15,14 @@ footer {
   justify-content: flex-end;
   width: 70%;
   padding: 5rem 0;
+  flex-wrap: wrap;
 
 
 }
 .wordsContainer{
    display: flex;
    justify-content: space-around;
+   flex-wrap: wrap;
   
 }
 

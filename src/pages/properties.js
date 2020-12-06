@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import Properties from "../components/Properties"
 import Image from "gatsby-image"
 
-const index = ({ data }) => {
+
+const index = ({data}) => {
   return (
     <Layout>
       <div className="headerContainer">

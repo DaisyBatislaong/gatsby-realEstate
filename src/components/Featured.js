@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "../styles/Featured.module.css"
+import styles from "../styles/Houses.module.css"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 
@@ -27,40 +27,44 @@ const Featured = () => {
       }
     }
   `)
+  console.log(data)
   return (
     <>
       <h1>FEATURED HOUSES</h1>
-      <section className={styles.page}>
-        {data.houses.nodes.map(house => {
-          return (
-            <article key={house.id} className={styles.wrapper}>
-              <Image
-                fluid={house.img[0].fluid}
-                alt={house.name.name}
-                style={{ height: "15rem" }}
-              />
-              <div className={styles.wrapperInner}>
-                <h3>
-                  {house.name.name} | ${house.price}
-                </h3>
-                <div className={styles.description}>
-                  <h5>
-                    <span className={styles.firstSpan}>
-                      {house.bath} Baths | {house.bed} Beds | {house.size}
-                      sq.ft.
-                    </span>
-                    <span>
-                      <button>
-                        <Link to={`/properties/${house.itemid}`}>Explore</Link>
-                      </button>
-                    </span>
-                  </h5>
+
+        <section className={styles.page}>
+          {data.houses.nodes.map(house => {
+            return (
+              <Link to={`/properties/${house.itemid}`}>
+              <article key={house.id} className={styles.wrapper}>
+                <Image
+                  fluid={house.img[0].fluid}
+                  alt={house.name.name}
+                  style={{ height: "15rem" }}
+                />
+                <div className={styles.wrapperInner}>
+                  <h3>
+                    {house.name.name} | ${house.price}
+                  </h3>
+                  <div className={styles.description}>
+                    <h5>
+                      <span className={styles.firstSpan}>
+                        {house.bath} Baths | {house.bed} Beds | {house.size}
+                        sq.ft.
+                      </span>
+                      <span>
+                        <Link to={`/properties/${house.itemid}`}>
+                          <button>Explore</button>
+                        </Link>
+                      </span>
+                    </h5>
+                  </div>
                 </div>
-              </div>
-            </article>
-          )
-        })}
-      </section>
+              </article>
+              </Link>
+            )
+          })}
+        </section>
       <div className={styles.flex}>
         <button className={styles.button}>
           <Link to="/properties">View All Properties</Link>
