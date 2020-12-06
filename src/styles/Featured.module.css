@@ -1,6 +1,6 @@
-h1{
-   text-align: center;
-   padding: 1rem;
+h1 {
+  text-align: center;
+  padding: 1rem;
 }
 
 .page {
@@ -14,7 +14,6 @@ h1{
   margin-left: 1rem;
   position: relative;
 }
-
 
 @media screen and (min-width: 768px) {
   .page {
@@ -34,16 +33,17 @@ h1{
 }
 
 @media screen and (max-width: 767px) {
-   .page {
-     display: grid;
-     grid-template-columns: 1fr;
-     row-gap: 2rem;
-   }
- }
- 
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .wrapperInner {
@@ -61,24 +61,50 @@ h1{
   transition: ease-in-out 0.2s;
 }
 
-.wrapperInner h3{
-   margin: 1rem 0rem;
-   color: #e8e4c9;
-   font-size: 1rem;
+.wrapperInner h3 {
+  margin: 1rem 0rem;
+  color: #e8e4c9;
+  font-size: 1rem;
 }
 
-.description h5{
-   color: #e8e4c9;
-   font-size: 0.7rem;
+.description h5 {
+  color: #e8e4c9;
+  font-size: 0.7rem;
 }
 
-.wrapper:hover .wrapperInner{
-   top: 120px;
+.wrapper:hover .wrapperInner {
+  top: 120px;
 }
 
 .page button {
-   padding: 1rem 2rem;
-   border: none;
-   background-color: rgba(224, 164, 34, 0.9);
-color: #e8e4c9;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: rgba(224, 164, 34, 0.9);
+  color: #e8e4c9;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.button {
+  border: 0.15rem solid black;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+.button a{
+  color: black;
+}
+
+.button:hover{
+  background-color: black;
+  transition: ease-in-out 0.5s;
+}
+.button:hover a{
+  color: white;
 }

@@ -1,13 +1,15 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link} from "gatsby"
 import styles from "../styles/Properties.module.css"
 import Image from "gatsby-image"
+
 
 const Properties = () => {
   const data = useStaticQuery(graphql`
     {
       houses: allContentfulRealEstate {
         nodes {
+          itemid
           id
           bath
           beds
@@ -18,7 +20,7 @@ const Properties = () => {
           }
           img {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -48,7 +50,7 @@ const Properties = () => {
                       sq.ft.
                     </span>
                     <span>
-                      <button>Explore</button>
+                      <button> <Link to={`/properties/${house.itemid}`}>Explore</Link></button>
                     </span>
                   </h5>
                 </div>

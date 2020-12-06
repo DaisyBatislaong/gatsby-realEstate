@@ -44,6 +44,7 @@ margin: 0 auto;
 .wrapper {
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .wrapperInner {
@@ -81,4 +82,5 @@ margin: 0 auto;
    border: none;
    background-color: rgba(224, 164, 34, 0.9);
 color: #e8e4c9;
+cursor: pointer;
 }

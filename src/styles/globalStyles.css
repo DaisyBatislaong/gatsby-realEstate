@@ -6,16 +6,18 @@
   margin: 0;
 }
 
-li{
-   list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-a{
-   text-decoration: none;
+a {
+  text-decoration: none;
 }
-.container{
-   min-height: 100vh;
+.container {
+  min-height: 100vh;
 }
-.headerContainer div{
-   width: 100%;
+.headerContainer div {
+  width: 100%;
 }
+
+

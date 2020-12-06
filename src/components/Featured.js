@@ -2,12 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "../styles/Featured.module.css"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
     {
       houses: allContentfulRealEstate(filter: { featured: { eq: true } }) {
         nodes {
+          itemid
           id
           bath
           beds
@@ -18,7 +20,7 @@ const Featured = () => {
           }
           img {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -44,11 +46,13 @@ const Featured = () => {
                 <div className={styles.description}>
                   <h5>
                     <span className={styles.firstSpan}>
-                      {house.bath} Baths | {house.bed} Beds | {house.size}{" "}
+                      {house.bath} Baths | {house.bed} Beds | {house.size}
                       sq.ft.
                     </span>
                     <span>
-                      <button>Explore</button>
+                      <button>
+                        <Link to={`/properties/${house.itemid}`}>Explore</Link>
+                      </button>
                     </span>
                   </h5>
                 </div>
@@ -57,6 +61,11 @@ const Featured = () => {
           )
         })}
       </section>
+      <div className={styles.flex}>
+        <button className={styles.button}>
+          <Link to="/properties">View All Properties</Link>
+        </button>
+      </div>
     </>
   )
 }
