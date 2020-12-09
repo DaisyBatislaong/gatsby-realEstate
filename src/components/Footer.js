@@ -7,7 +7,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa"
-import { Link } from "gatsby"
+
 const Footer = () => {
   return (
     <footer>

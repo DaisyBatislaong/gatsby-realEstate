@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
