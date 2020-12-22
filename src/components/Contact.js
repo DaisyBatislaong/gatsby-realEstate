@@ -1,42 +1,34 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import { TextField, Container } from "@material-ui/core"
+import styles from "../styles/Contact.module.css"
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    margin: "3rem auto",
-    padding: "3rem",
-    border: "1px solid black",
-    textAlign: "center",
 
-    "& > *": {
-      margin: theme.spacing(2),
-      width: "35ch",
-    },
-    "& .message": {
-      width: "72ch",
-    },
-  },
-}))
 
 const Contact = () => {
-  const classes = useStyles()
+
   return (
-      <form className={classes.root} noValidate autoComplete="off">
-        <TextField id="firstName" label="First Name" variant="outlined" />
-        <TextField id="secondName" label="Second Name" variant="outlined" />
-        <TextField id="email" label="E-mail" variant="outlined" />
-        <TextField id="phone" label="Phone Number" variant="outlined" />
-        <TextField
-          id="message"
-          label="Message"
-          placeholder="Placeholder"
-          multiline
-          variant="outlined"
-          className="message"
-        />
-      </form>
+ <div className={styles.background}>
+    <form action="#" method="post" id={styles.contact_form}>
+      <div className={styles.name}>
+        <label for="name"></label>
+        <input type="text" placeholder="My name is" name="name" id={styles.name_input} required />
+      </div>
+      <div className={styles.email}>
+        <label for="email"></label>
+        <input type="email" placeholder="My e-mail is" name="email" id={styles.email_input} required/>
+      </div>
+      <div className={styles.telephone}>
+        <label for="name"></label>
+        <input type="text" placeholder="My number is" name="telephone" id={styles.telephone_input} required/>
+      </div>
+      <div className={styles.message}>
+        <label for="message"></label>
+        <textarea name="message" placeholder="Message" id={styles.message_input} cols="30" rows="5" required></textarea>
+      </div>
+      <div className={styles.submit}>
+        <input type="submit" value="Connect" id={styles.form_button} />
+      </div>
+    </form>
+  </div>
   )
 }
 

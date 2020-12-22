@@ -4,6 +4,7 @@
   max-width: 2000px;
   font-family: "Spartan";
   margin: 0;
+
 }
 
 li {
@@ -20,11 +21,7 @@ a {
   width: 100%;
 }
 
-.contactBackground{
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  margin-top: 3rem;
+h1{
+  color: black;
 }
 

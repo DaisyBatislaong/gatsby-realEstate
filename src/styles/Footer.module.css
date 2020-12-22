@@ -12,36 +12,48 @@ footer {
 .innerContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-self: center;
+  align-items: space-between;
   width: 70%;
-  padding: 5rem 0;
+  padding: 1rem 0;
   flex-wrap: wrap;
-
-
 }
-.wordsContainer{
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-  
+.wordsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.iconContainer{
-display: flex;
-justify-content: flex-start;
-margin-top :0;
-margin-left: 5.1rem;
+.iconContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-left: 20rem;
 }
-.iconContainer a{
-font-size: 1.5rem;
-margin-right: 1rem;
-cursor: pointer;
-color: white;
-
+.iconContainer a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: white;
 }
 
-.line{
-   border-top: 0.1rem solid white;
-   height: 0;
-   margin: 1rem 8rem 1rem 5.3rem;
+.line {
+  border-top: 0.1rem solid white;
+  height: 0;
+  margin: 1rem 8rem 1rem 5.3rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .innerContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .iconContainer {
+    margin-left: 2rem;
+  }
 }
