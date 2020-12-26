@@ -31,16 +31,24 @@ const Footer = () => {
         </div>
         <div className={styles.line}></div>
         <div className={styles.iconContainer}>
-          <a href="https://web.facebook.com/djbatislaong" target="_blank">
+          <a
+            href="https://web.facebook.com/djbatislaong"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook />
           </a>
-          <a href="https://twitter.com/DTechImperium" target="_blank">
+          <a
+            href="https://twitter.com/DTechImperium"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaTwitter />
           </a>
-          <a href="https://ph.linkedin.com/" target="_blank">
+          <a href="https://ph.linkedin.com/" target="_blank" rel="noreferrer">
             <FaLinkedinIn />
           </a>
-          <a href="https://www.instagram.com/" target="_blank">
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
             <FaInstagram />
           </a>
         </div>

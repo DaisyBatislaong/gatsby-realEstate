@@ -27,7 +27,6 @@ const Featured = () => {
       }
     }
   `)
-  console.log(data)
   return (
     <>
       <h1>FEATURED HOUSES</h1>

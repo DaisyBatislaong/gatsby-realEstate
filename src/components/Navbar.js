@@ -55,12 +55,12 @@ const Navbar = () => {
             </Link>
           </NavLi>
           <NavLi scrolled={scrolled}>
-            <Link to="/" className={styles.middle}>
+            <Link to="/about" className={styles.middle}>
               About Us
             </Link>
           </NavLi>
           <NavLi scrolled={scrolled}>
-            <Link to="/" className={styles.middle}>
+            <Link to="/contact" className={styles.middle}>
               Contact
             </Link>
           </NavLi>

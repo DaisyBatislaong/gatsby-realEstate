@@ -62,13 +62,13 @@ select,
 textarea {
   background: none;
   border: none;
-  border-bottom: solid 2px white;
+  border: solid 2px white;
   color: white;
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 1px;
   margin: 0em 0 1.875em 0;
-  padding: 0 0 0.875em 0;
+  padding:1rem;
   text-transform: uppercase;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -87,7 +87,7 @@ input[type="text"]:focus,
 [type="email"]:focus,
 textarea:focus {
   outline: none;
-  padding: 0 0 0.875em 0;
+  padding: 1rem;
 }
 
 .message {

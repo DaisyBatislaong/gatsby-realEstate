@@ -37,7 +37,7 @@ const Properties = () => {
                 <Image
                   fluid={house.img[0].fluid}
                   alt={house.name.name}
-                  style={{ height: "15rem" }}
+                  className={styles.myImg}
                 />
                 <div className={styles.wrapperInner}>
                   <h3>

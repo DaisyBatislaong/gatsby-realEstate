@@ -1,6 +1,6 @@
 import React from "react"
 import Featured from "../components/Featured"
-import Header from "../components/Header"
+import Header from "../components/MainHeader"
 import Layout from "../components/Layout"
 
 const index = () => {
