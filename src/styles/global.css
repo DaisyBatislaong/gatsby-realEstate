@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Spartan&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav {
+   @apply bg-myBlack text-myWhite-100 text-2xl flex items-center;
+}
+
+.title {
+   @apply text-3xl my-6 sm:text-6xl text-center;
+}
+

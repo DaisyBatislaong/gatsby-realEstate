@@ -1,12 +1,12 @@
 import React from "react"
 import Navbar from "./Navbar"
-import "../styles/globalStyles.css"
+import "../styles/global.css"
 import Footer from "./Footer"
 import Contact from "./Contact"
 
 const Layout = ({ children }) => {
   return (
-    <div className='container'>
+    <div className="container-xl">
       <Navbar />
       <div>{children}</div>
       <Contact/>

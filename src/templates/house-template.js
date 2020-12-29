@@ -2,7 +2,7 @@ import React from "react"
 import { graphql} from "gatsby"
 import Layout from "../components/Layout"
 import Image from "gatsby-image"
-import styles from "../styles/house-template.module.css"
+
 
 const ComponentName = ({ data }) => {
   const {
@@ -23,7 +23,7 @@ const ComponentName = ({ data }) => {
       <div>
         <Image fluid={img[0].fluid} style={{ width: "100%" }} />
       </div>
-      <section className={styles.imgContainer}>
+      <section >
         {img.map(image => {
           return (
             <Image
@@ -33,7 +33,7 @@ const ComponentName = ({ data }) => {
           )
         })}
       </section>
-      <article className={styles.article}>
+      <article>
         <h1>{street}</h1>
         <h4>{city}</h4>
         <h2>${price}</h2>

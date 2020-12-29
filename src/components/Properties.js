@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import styles from "../styles/Houses.module.css"
 import Image from "gatsby-image"
 
 const Properties = () => {
@@ -29,23 +28,23 @@ const Properties = () => {
   return (
     <>
       <h1>ALL PROPERTIES</h1>
-      <section className={styles.page}>
+      <section >
         {data.houses.nodes.map(house => {
           return (
             <Link to={`/properties/${house.itemid}`}>
-              <article key={house.id} className={styles.wrapper}>
+              <article key={house.id} >
                 <Image
                   fluid={house.img[0].fluid}
                   alt={house.name.name}
-                  className={styles.myImg}
+                  
                 />
-                <div className={styles.wrapperInner}>
+                <div >
                   <h3>
                     {house.name.name} | ${house.price}
                   </h3>
-                  <div className={styles.description}>
+                  <div >
                     <h5>
-                      <span className={styles.firstSpan}>
+                      <span >
                         {house.bath} Baths | {house.bed} Beds | {house.size}{" "}
                         sq.ft.
                       </span>

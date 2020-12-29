@@ -1,84 +1,70 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa"
-import styles from "../styles/Navbar.module.css"
-import logoWhite from "../img/logo-house-white.png"
-import {
-  NavWrapper,
-  NavLi,
-  MobileIcon,
-  LinkContainer,
-} from "../styles/NavbarStyles"
+import * as React from "react";
+import { Link } from "gatsby";
+import logo from "../img/logo-house-white.png";
+import { FaPhone, FaEnvelope, FaTimes, FaBars } from "react-icons/fa";
+import { Nav, ImgCon, NavList } from "../styles/NavbarStyles";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [resized, setResized] = useState(false)
-  const [clicked, setClicked] = useState(false)
+   const [scrolled, setScroll] = React.useState(false);
+   const [resized, setSize] = React.useState(false);
+   const [clicked, setClick] = React.useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 40) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  }
+   const changeBackground = () => {
+      if (window.scrollY) {
+         setScroll(true);
+      } else {
+         setScroll(false);
+      }
+   };
 
-  const changeSize = () => {
-    if (window.innerWidth <= 960) {
-      setResized(true)
-    } else {
-      setResized(false)
-    }
-  }
+   const changeSize = () => {
+      if (window.innerWidth <= 960) {
+         setSize(true);
+      } else {
+         setSize(false);
+      }
+   };
 
-  const handleClicked = () => {
-    setClicked(!clicked)
-  }
-  window.addEventListener("scroll", changeBackground)
-  window.addEventListener("resize", changeSize)
+   const handleClicked = () => {
+      setClick(!clicked);
+   };
 
-  return (
-    <NavWrapper scrolled={scrolled}>
-      <div className={styles.navContainer}>
-        <Link>
-          <img src={logoWhite} alt="" width={scrolled || resized ? 160 : 208} />
-        </Link>
-        <LinkContainer className={styles.linkContainer} clicked={clicked}>
-          <NavLi scrolled={scrolled}>
-            <Link to="/" className={styles.middle}>
-              Home
-            </Link>
-          </NavLi>
-          <NavLi scrolled={scrolled}>
-            <Link to="/properties" className={styles.middle}>
-              Properties
-            </Link>
-          </NavLi>
-          <NavLi scrolled={scrolled}>
-            <Link to="/about" className={styles.middle}>
-              About Us
-            </Link>
-          </NavLi>
-          <NavLi scrolled={scrolled}>
-            <Link to="/contact" className={styles.middle}>
-              Contact
-            </Link>
-          </NavLi>
-        </LinkContainer>
-        <ul className={styles.iconContainer}>
-          <NavLi scrolled={scrolled} resized={resized}>
-            <FaEnvelope />
-          </NavLi>
-          <NavLi scrolled={scrolled} resized={resized}>
-            <FaPhone />
-          </NavLi>
-          <MobileIcon onClick={handleClicked}>
-            {clicked ? <FaTimes /> : <FaBars />}
-          </MobileIcon>
-        </ul>
-      </div>
-    </NavWrapper>
-  )
-}
+   window.addEventListener("scroll", changeBackground);
+   window.addEventListener("resize", changeSize);
+   return (
+      <Nav scrolled={scrolled} className="nav container-xl">
+         <ImgCon scrolled={scrolled} className="w-60">
+            <img src={logo} alt="" />
+         </ImgCon>
+         <NavList className="hidden sm:flex justify-around w-4/6 " clicked={clicked} scrolled={scrolled}>
+            <li >
+               <Link to="/" className="hover:text-deco">
+                  Home
+               </Link>
+            </li>
+            <li>
+               <Link to="/properties">Properties</Link>
+            </li>
+            <li>
+               <Link to="/about">About Us</Link>
+            </li>
+            <li>
+               <Link to="/contact">Contact</Link>
+            </li>
+         </NavList>
+         <ul className="flex justify-end w-3/4 sm:w-1/12 sm:justify-around">
+            <li className="mx-2 sm:mx-0">
+               <FaPhone />
+            </li>
+            <li className="mx-2 sm:mx-0">
+               <FaEnvelope />
+            </li>
+            <li className="inline-block ml-2 mr-4 cursor-pointer sm:hidden sm:mx-0" onClick={handleClicked}>
+               {clicked ? <FaTimes /> : <FaBars />}
+            </li>
+         </ul>
+      </Nav>
+   );
+};
 
-export default Navbar
+export default Navbar;

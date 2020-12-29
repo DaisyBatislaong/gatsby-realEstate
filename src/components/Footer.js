@@ -1,6 +1,5 @@
 import React from "react"
 import logoWhite from "../img/logo-house-white.png"
-import styles from "../styles/Footer.module.css"
 import {
   FaFacebook,
   FaTwitter,
@@ -12,8 +11,8 @@ const Footer = () => {
   return (
     <footer>
       <img src={logoWhite} alt="" width="300" />
-      <div className={styles.innerContainer}>
-        <div className={styles.wordsContainer}>
+      <div >
+        <div >
           <div>
             <h2>Coral Gables Office</h2>
             <h5>4000 Ponce de Leon Blvd Suite 700</h5>
@@ -29,8 +28,8 @@ const Footer = () => {
             <h5>mb@jillszeder.com</h5>
           </div>
         </div>
-        <div className={styles.line}></div>
-        <div className={styles.iconContainer}>
+        <div ></div>
+        <div >
           <a
             href="https://web.facebook.com/djbatislaong"
             target="_blank"
