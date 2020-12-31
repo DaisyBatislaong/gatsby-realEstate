@@ -30,28 +30,30 @@ const Featured = () => {
       <>
          <h1 className="title">FEATURED HOUSES</h1>
 
-         <section className="mx-auto grid md:grid-cols-3 gap-5 text-myWhite-200 container">
+         <section className="sectionHouses">
             {data.houses.nodes.map((house) => {
                return (
                   <Link to={`/properties/${house.itemid}`}>
                      <article key={house.id} className="container relative overflow-hidden">
                         <Image fluid={house.img[0].fluid} alt={house.name.name} style={{ height: "15rem" }} />
-                        <div className="absolute -bottom-10 left-4 ">
-                           <h3 className="text-xl">
-                              {house.name.name} | ${house.price}
-                           </h3>
-                           <div className="mt-1">
-                              <h5>
-                                 <span>
-                                    {house.bath} Baths | {house.bed} Beds | {house.size}
-                                    sq.ft.
-                                 </span>
-                                 <span>
-                                    <Link to={`/properties/${house.itemid}`}>
-                                       <button className="bg-lightGreen-200 p-2 ml-16 text-myWhite-100 rounded-md">Explore</button>
-                                    </Link>
-                                 </span>
-                              </h5>
+                        <div className="textOverlay group ">
+                           <div className="textContainer ">
+                              <h3 className="text-xl">
+                                 {house.name.name} | ${house.price}
+                              </h3>
+                              <div className="mt-1">
+                                 <h5>
+                                    <span>
+                                       {house.bath} Baths | {house.bed} Beds | {house.size}
+                                       sq.ft.
+                                    </span>
+                                    <span>
+                                       <Link to={`/properties/${house.itemid}`}>
+                                          <button className="houseButton">Explore</button>
+                                       </Link>
+                                    </span>
+                                 </h5>
+                              </div>
                            </div>
                         </div>
                      </article>
@@ -59,8 +61,8 @@ const Featured = () => {
                );
             })}
          </section>
-         <div>
-            <button>
+         <div className="flex justify-center mt-16">
+            <button className="button">
                <Link to="/properties">View All Properties</Link>
             </button>
          </div>

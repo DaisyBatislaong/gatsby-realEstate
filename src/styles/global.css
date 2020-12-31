@@ -9,6 +9,24 @@
 }
 
 .title {
-   @apply text-3xl my-6 sm:text-6xl text-center;
+   @apply text-3xl my-6 sm:text-6xl text-center text-lightGreen-200;
 }
 
+.sectionHouses {
+   @apply mx-auto grid md:grid-cols-3 gap-5 text-gray-200 font-semibold container;
+}
+.textOverlay {
+   @apply absolute transform h-full w-full top-0 bg-lightGreen-100 bg-opacity-0 hover:bg-opacity-30;
+}
+
+.textContainer {
+   @apply absolute left-4  transform translate-y-52 w-full transition group-hover:translate-y-40 group-hover:duration-75;
+}
+
+.houseButton {
+   @apply bg-lightGreen-200 p-2 ml-16 text-myWhite-100 rounded-md;
+}
+
+.button {
+   @apply bg-myBlack text-myWhite-200 p-5 rounded-lg;
+}

@@ -4,8 +4,8 @@ import React from "react"
 const About = () => {
 
   return  (
-     <div>
-     <h1>About Us</h1>
+     <div className="mx-20">
+     <h1 className="title">About Us</h1>
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel arcu arcu. Aliquam facilisis sem in ante molestie, a elementum nibh placerat. Nunc ut posuere est, sed accumsan ex. Etiam vel lorem erat. Curabitur pulvinar mollis tellus, nec feugiat eros venenatis eget. Fusce a massa mauris. Sed non diam vulputate, aliquet tellus id, sodales orci. Nullam bibendum arcu velit, at laoreet dolor feugiat id. Curabitur condimentum sapien a odio sodales, vel vehicula nibh dictum. Cras bibendum mi quam, a laoreet mauris feugiat sit amet. Sed fringilla ultricies urna, sed auctor sem porta a. Praesent vitae tincidunt nibh.</p>
 
      <p>

@@ -19,7 +19,7 @@ export const ImgCon = styled.div`
 `;
 
 export const NavList = styled.ul`
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;

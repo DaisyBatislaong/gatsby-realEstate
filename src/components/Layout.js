@@ -6,7 +6,7 @@ import Contact from "./Contact"
 
 const Layout = ({ children }) => {
   return (
-    <div className="container-xl">
+    <div className="2xl:container">
       <Navbar />
       <div>{children}</div>
       <Contact/>
