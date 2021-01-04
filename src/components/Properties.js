@@ -27,7 +27,7 @@ const Properties = () => {
    `);
    return (
       <>
-         <h1 className="title">ALL PROPERTIES cool</h1>
+         <h1 className="title">ALL PROPERTIES</h1>
          <section className="sectionHouses">
             {data.houses.nodes.map((house) => {
                return (
