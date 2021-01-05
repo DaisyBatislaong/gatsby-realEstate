@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Image from "gatsby-image";
+import ContactHero from "../components/ContactHero";
 
 const ComponentName = ({ data }) => {
    const {
@@ -36,6 +37,7 @@ const ComponentName = ({ data }) => {
             </h4>
             <p className="text-sm mx-20">{description}</p>
          </article>
+         <ContactHero/>
       </Layout>
    );
 };

@@ -18,6 +18,7 @@ module.exports = {
             spartanFont: ["Spartan"],
             spacemonoFont: ["Space Mono"],
          },
+         backgroundImage: (theme) => ({ ContactBackground: "url('../img/ContactBackground.jpg')" }),
       },
    },
    variants: {
