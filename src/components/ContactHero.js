@@ -2,10 +2,10 @@ import React from "react";
 
 const ContactHero = () => {
    return (
-      <div className="bg-ContactBackground bg-cover">
-         <h1 className="text-center text-4xl pt-8">Contact</h1>
-         <form >
-            <ul className="grid sm:grid-flow-row mx-20  gap-8 text-myWhite-100 px-12 py-20 text-xl">
+      <div className="bg-ContactBackground bg-cover mt-20 text-myWhite-100">
+         <h1 className="text-center text-6xl pt-12 font-semibold ">Contact</h1>
+         <form>
+            <ul className="grid sm:grid-flow-row mx-20  gap-8 px-12 pb-20 pt-8 text-xl">
                <li className="grid">
                   <label>Full Name</label>
                   <div className="grid gap-10 sm:grid-cols-2">
@@ -19,7 +19,7 @@ const ContactHero = () => {
                      <input type="email" name="email" placeholder="E-mail" className="inputStyle" />
                   </div>
                   <div className="grid">
-                     <label>Contacts</label>
+                     <label>Contact Number</label>
                      <input type="tel" name="number" placeholder="Number" className="inputStyle" />
                   </div>
                </li>
