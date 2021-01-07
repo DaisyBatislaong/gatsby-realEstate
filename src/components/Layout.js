@@ -1,19 +1,17 @@
-import React from "react"
-import Navbar from "./Navbar"
-import "../styles/global.css"
-import Footer from "./Footer"
-
-import ContactHero from "./ContactHero"
+import React from "react";
+import Navbar from "./Navbar";
+import "../styles/global.css";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
-  return (
-    <div className="2xl:container">
-      <Navbar />
-      <div>{children}</div>
+   return (
+      <div className="2xl:container">
+         <Navbar />
+         <div>{children}</div>
 
-      <Footer/>
-    </div>
-  )
-}
+         <Footer />
+      </div>
+   );
+};
 
-export default Layout
+export default Layout;

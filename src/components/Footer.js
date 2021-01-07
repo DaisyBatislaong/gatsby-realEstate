@@ -11,7 +11,7 @@ const Footer = () => {
                <div className="grid sm:grid-cols-2 sm:gap-x-12 gap-y-4 pt-4 sm:pt-0 place-items-center">
                   <div className="place-items-center">
                      <h2>Coral Gables Office</h2>
-                     <h5>4000 Ponce de Leon Blvd Suite 700</h5>
+                     <h5>4000 Ponce Blvd Suite 700</h5>
                      <h5>Coral Gables, FL 33146</h5>
                      <h5>305.722.5721</h5>
                      <h5>cg@jillszeder.com</h5>
@@ -26,17 +26,17 @@ const Footer = () => {
                </div>
             </div>
             <div className="flex text-2xl place-content-center pt-4">
-               <a href="https://web.facebook.com/djbatislaong" target="_blank" rel="noreferrer" className="mx-3">
-                  <FaFacebook />
+               <a href="https://web.facebook.com/djbatislaong" target="_blank" rel="noreferrer" className="mx-3 ">
+                  <FaFacebook className="hover:bg-lightGreen-100" />
                </a>
-               <a href="https://twitter.com/DTechImperium" target="_blank" rel="noreferrer" className="mx-3">
-                  <FaTwitter />
+               <a href="https://twitter.com/DTechImperium" target="_blank" rel="noreferrer" className="mx-3 ">
+                  <FaTwitter className="hover:bg-lightGreen-100" />
                </a>
-               <a href="https://ph.linkedin.com/" target="_blank" rel="noreferrer" className="mx-3">
-                  <FaLinkedinIn />
+               <a href="https://ph.linkedin.com/" target="_blank" rel="noreferrer" className="mx-3 ">
+                  <FaLinkedinIn className="hover:bg-lightGreen-100" />
                </a>
-               <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="mx-3">
-                  <FaInstagram />
+               <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="mx-3 ">
+                  <FaInstagram className="hover:bg-lightGreen-100" />
                </a>
             </div>
          </div>

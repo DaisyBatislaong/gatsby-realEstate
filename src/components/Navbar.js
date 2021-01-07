@@ -37,7 +37,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
          </ImgCon>
          <NavList className="hidden sm:flex justify-around w-4/6 " clicked={clicked} scrolled={scrolled}>
-            <li >
+            <li>
                <Link to="/" className=" ">
                   Home
                </Link>
@@ -52,12 +52,32 @@ const Navbar = () => {
                <Link to="/contact">Contact</Link>
             </li>
          </NavList>
-         <ul className="flex justify-end w-3/4 lg:w-1/12 lg:justify-around">
-            <li className="mx-2 lg:mx-0">
+         <ul className="flex justify-end w-3/4 lg:w-1/12 lg:justify-around ">
+            <li className="mx-2 lg:mx-0 group cursor-pointer relative">
                <FaPhone />
+               <ul className=" absolute top-8 place-content-center w-40 right-1 -left-14 gap-y-1 hidden group-hover:grid">
+                  <li className="bg-lightGreen-100 p-2 hover:bg-lightGreen-200">
+                     <h2 className="text-base">Coral Gables Office</h2>
+                     <h5 className="text-sm">305.722.5721</h5>
+                  </li>
+                  <li className="bg-lightGreen-100 p-2 hover:bg-lightGreen-200">
+                     <h2 className="text-base">Miami Beach Office</h2>
+                     <h5 className="text-sm">305.341.7447</h5>
+                  </li>
+               </ul>
             </li>
-            <li className="mx-2 lg:mx-0">
+            <li className="mx-2 lg:mx-0 group cursor-pointer relative">
                <FaEnvelope />
+               <ul className="absolute top-8 place-content-center w-40 right-1 -left-16 gap-y-1 hidden group-hover:grid">
+                  <li className="bg-lightGreen-100 p-2 hover:bg-lightGreen-200">
+                     <h2 className="text-base">Coral Gables Office</h2>
+                     <h5 className="text-sm">cg@jillszeder.com</h5>
+                  </li>
+                  <li className="bg-lightGreen-100 p-2 hover:bg-lightGreen-200">
+                     <h2 className="text-base">Miami Beach Office</h2>
+                     <h5 className="text-sm">mb@jillszeder.com</h5>
+                  </li>
+               </ul>
             </li>
             <li className="inline-block ml-2 mr-4 cursor-pointer lg:hidden lg:mx-0" onClick={handleClicked}>
                {clicked ? <FaTimes /> : <FaBars />}

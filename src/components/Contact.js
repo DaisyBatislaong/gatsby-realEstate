@@ -5,7 +5,7 @@ const Contact = () => {
       <div className="bg-black my-20 mx-8">
          <h1 className="text-center text-6xl pt-12 font-semibold text-myWhite-100">Contact</h1>
          <form>
-            <ul className="grid sm:grid-flow-row sm:mx-20 gap-x-8 gap-y-6 text-myWhite-100 px-12 pb-20 pt-8 text-xl">
+            <ul className="grid sm:grid-flow-row sm:mx-20 gap-x-8 gap-y-6 text-myWhite-100 px-12 pb-20 pt-8 text-xl -mx-5">
                <li className="grid">
                   <label>Full Name</label>
                   <div className="grid gap-10 sm:grid-cols-2">

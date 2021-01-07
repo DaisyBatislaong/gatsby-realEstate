@@ -5,7 +5,7 @@ const ContactHero = () => {
       <div className="bg-ContactBackground bg-cover mt-20 text-myWhite-100">
          <h1 className="text-center text-6xl pt-12 font-semibold ">Contact</h1>
          <form>
-            <ul className="grid sm:grid-flow-row mx-20  gap-8 px-12 pb-20 pt-8 text-xl">
+            <ul className="grid mx-12 sm:grid-flow-row sm:mx-20 gap-8 sm:px-12 pb-20 pt-8 text-xl">
                <li className="grid">
                   <label>Full Name</label>
                   <div className="grid gap-10 sm:grid-cols-2">
