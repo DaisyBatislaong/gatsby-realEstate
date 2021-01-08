@@ -27,6 +27,7 @@ module.exports = {
          transitionDuration: ["group-hover"],
          display: ["hover", "focus", "group-hover"],
          fill: ['hover', 'focus'],
+         padding: ['hover'],
       },
    },
    plugins: [],

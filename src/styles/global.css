@@ -42,3 +42,7 @@
 .submitbtn {
    @apply px-8 py-2 bg-transparent border-2 border-myWhite-200 transition ease-in-out hover:border-myWhite-100 hover:bg-myWhite-100 hover:text-black duration-300;
 }
+
+.navLinks {
+   @apply border-b-2 pb-1 border-opacity-0 border-lightGreen-100 hover:border-opacity-100 transition ease-in-out;
+}

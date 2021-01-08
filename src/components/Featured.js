@@ -28,13 +28,13 @@ const Featured = () => {
    `);
    return (
       <>
-         <h1 className="title">FEATURED HOUSES</h1>
+         <h1 className="title" data-sal="slide-up" data-sal-delay="1200" data-sal-easing="easeInOutSine">FEATURED HOUSES</h1>
 
-         <section className="sectionHouses">
+         <section className="sectionHouses" >
             {data.houses.nodes.map((house) => {
                return (
-                  <Link to={`/properties/${house.itemid}`}>
-                     <article key={house.id} className="container relative overflow-hidden">
+                  <Link to={`/properties/${house.itemid}`} data-sal="zoom-in" data-sal-delay="1200" data-sal-easing="easeInOutQuart">
+                     <article key={house.id} className="container relative overflow-hidden" >
                         <Image fluid={house.img[0].fluid} alt={house.name.name} style={{ height: "15rem" }} />
                         <div className="textOverlay group ">
                            <div className="textContainer ">

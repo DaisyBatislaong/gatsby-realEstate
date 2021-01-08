@@ -28,7 +28,7 @@ const ComponentName = ({ data }) => {
                return <Image fluid={image.fluid} style={{ width: "10rem", height: "auto" }} />;
             })}
          </section>
-         <article className="text-center mt-28">
+         <article className="grid place-items-center mt-28">
             <h1 className="font-spacemonoFont text-lightGreen-200 text-6xl">{street}</h1>
             <h4 className="text-gray-500 text-xl my-4">{city}</h4>
             <h2 className="text-2xl ">${price}</h2>
@@ -37,7 +37,7 @@ const ComponentName = ({ data }) => {
             </h4>
             <p className="text-sm mx-20">{description}</p>
          </article>
-         <ContactHero/>
+         <ContactHero />
       </Layout>
    );
 };

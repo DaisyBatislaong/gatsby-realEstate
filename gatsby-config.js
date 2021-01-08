@@ -15,7 +15,8 @@ module.exports = {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-styled-components`,
-      'gatsby-plugin-postcss', 
+      "gatsby-plugin-postcss",
+      `gatsby-plugin-scroll-reveal`,
       {
          resolve: `gatsby-source-contentful`,
          options: {
