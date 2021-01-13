@@ -33,5 +33,4 @@ module.exports = {
          },
       },
    ],
-   pathPrefix: "/gatsby-realEstate",
 };
