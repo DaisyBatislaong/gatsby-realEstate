@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
+import Layout from "../components/Layout";
 
-const error = () => {
+const myerror = () => {
    return (
-      <div>
-         Error
-         <Link to="index">Go Back Home</Link>
-      </div>
+      <Layout>
+         <h1>Page Not Found</h1>
+         <p>Oops, we couldn't find this page!</p>
+      </Layout>
    );
 };
 
-export default error;
+export default myerror
