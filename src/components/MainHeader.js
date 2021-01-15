@@ -8,11 +8,10 @@ const Header = () => {
       fluid: file(relativePath: {eq: "background1.jpg"}) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
-    }
+    }}
   `)
   return(
      <div className="headerContainer">
