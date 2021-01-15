@@ -5,7 +5,7 @@ import Image from "gatsby-image";
 const Header = () => {
    const data = useStaticQuery(graphql`
       {
-         houses: contentfulOtherContent(title: { eq: "realEstatebg" }) {
+         header: contentfulOtherContent(title: { eq: "realEstatebg" }) {
             background {
                fluid {
                   ...GatsbyContentfulFluid
@@ -16,7 +16,7 @@ const Header = () => {
    `);
    return (
       <div className="headerContainer">
-         <Image fluid={data.houses.background.fluid} />
+         <Image fluid={data.header.background.fluid} />
       </div>
    );
 };
