@@ -1,23 +1,38 @@
-const path = require("path")
+const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    query GetHouses {
-      houses: allContentfulRealEstate {
-        nodes {
-          itemid
-        }
+   const { createPage } = actions;
+   const result = await graphql(`
+      query GetHouses {
+         houses: allContentfulRealEstate {
+            nodes {
+               itemid
+            }
+         }
       }
-    }
-  `)
-  result.data.houses.nodes.forEach(house => {
-    createPage({
-      path: `/properties/${house.itemid}`,
-      component: path.resolve(`src/templates/house-template.js`),
-      context: {
-        house: house.itemid,
-      },
-    })
-  })
-}
+   `);
+   result.data.houses.nodes.forEach((house) => {
+      createPage({
+         path: `/properties/${house.itemid}`,
+         component: path.resolve(`src/templates/house-template.js`),
+         context: {
+            house: house.itemid,
+         },
+      });
+   });
+};
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+   if (stage === "build-html") {
+      actions.setWebpackConfig({
+         module: {
+            rules: [
+               {
+                  test: /bad-module/,
+                  use: loaders.null(),
+               },
+            ],
+         },
+      });
+   }
+};
