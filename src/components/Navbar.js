@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import { window, document, exists } from "browser-monads";
 import logo from "../img/logo-house-white.png";
 import { FaPhone, FaEnvelope, FaTimes, FaBars } from "react-icons/fa";
 import { Nav, ImgCon, NavList } from "../styles/NavbarStyles";
