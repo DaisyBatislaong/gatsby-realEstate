@@ -29,8 +29,8 @@ const ComponentName = ({ data }) => {
             })}
          </section>
          <article className="grid place-items-center mt-28">
-            <h1 className="font-spacemonoFont text-lightGreen-200 text-6xl">{street}</h1>
-            <h4 className="text-gray-500 text-xl my-4">{city}</h4>
+            <h1 className="font-spacemonoFont text-lightGreen-200 text-6xl text-center">{street}</h1>
+            <h4 className="text-gray-500 text-xl my-4 text-center">{city}</h4>
             <h2 className="text-2xl ">${price}</h2>
             <h4 className="text-gray-500 text-xl mt-2 mb-6">
                {bath} Baths | {beds} Beds | {size} Sq.Ft.
