@@ -1,47 +1,49 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "babel-plugin-styled-components": "^1.12.0",
-    "emailjs-com": "^2.6.4",
-    "formik": "^2.2.6",
-    "gatsby": "^2.26.1",
-    "gatsby-background-image": "^1.3.1",
-    "gatsby-image": "^2.7.0",
-    "gatsby-plugin-postcss": "^3.4.0",
-    "gatsby-plugin-scroll-reveal": "^0.0.7",
-    "gatsby-plugin-sharp": "^2.10.0",
-    "gatsby-plugin-styled-components": "^3.6.0",
-    "gatsby-source-contentful": "^4.2.0",
-    "gatsby-source-filesystem": "^2.7.0",
-    "gatsby-transformer-sharp": "^2.8.0",
-    "postcss": "^8.2.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-icons": "^4.1.0",
-    "styled-components": "^5.2.1",
-    "tailwindcss": "^2.0.2"
-  },
-  "devDependencies": {
-    "prettier": "2.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+   "name": "gatsby-starter-hello-world",
+   "private": true,
+   "description": "A simplified bare-bones starter for Gatsby",
+   "version": "0.1.0",
+   "license": "0BSD",
+   "scripts": {
+      "build": "gatsby build",
+      "develop": "gatsby develop",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+      "start": "npm run develop",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+   },
+   "dependencies": {
+      "autoprefixer": "^10.1.0",
+      "babel-plugin-styled-components": "^1.12.0",
+      "emailjs-com": "^2.6.4",
+      "formik": "^2.2.6",
+      "gatsby": "^2.26.1",
+      "gatsby-background-image": "^1.3.1",
+      "gatsby-image": "^2.7.0",
+      "gatsby-plugin-postcss": "^3.4.0",
+      "gatsby-plugin-scroll-reveal": "^0.0.7",
+      "gatsby-plugin-sharp": "^2.10.0",
+      "gatsby-plugin-styled-components": "^3.6.0",
+      "gatsby-source-contentful": "^4.2.0",
+      "gatsby-source-filesystem": "^2.7.0",
+      "gatsby-transformer-sharp": "^2.8.0",
+      "gh-pages": "^3.1.0",
+      "postcss": "^8.2.1",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "react-icons": "^4.1.0",
+      "styled-components": "^5.2.1",
+      "tailwindcss": "^2.0.2"
+   },
+   "devDependencies": {
+      "prettier": "2.1.2"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+   },
+   "bugs": {
+      "url": "https://github.com/gatsbyjs/gatsby/issues"
+   }
 }
